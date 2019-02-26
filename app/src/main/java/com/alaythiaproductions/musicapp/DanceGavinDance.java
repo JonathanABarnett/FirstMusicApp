@@ -2,7 +2,10 @@ package com.alaythiaproductions.musicapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AndroidException;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -56,14 +59,9 @@ public class DanceGavinDance extends AppCompatActivity {
         songs.add("Brink of Escape");
         songs.add("Dance Dance");
 
-
-        LinearLayout rootView = (LinearLayout)findViewById(R.id.root_view);
-
-        for (int i = 0; i < songs.size(); i++) {
-            TextView wordView = new TextView(this);
-            wordView.setText(songs.get(i));
-            rootView.addView(wordView);
-        }
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, songs);
+        ListView listView = (ListView)findViewById(R.id.list);
+        listView.setAdapter(arrayAdapter);
 
     }
 }
