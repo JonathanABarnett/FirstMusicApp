@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Emarosa"></activity>
-        <activity android:name=".ForeverCameCalling" />
-        <activity android:name=".KnucklePuck" />
-        <activity android:name=".DanceGavinDance" />
+        <activity android:name=".Emarosa"
+            android:label="@string/category_emarosa"></activity>
+        <activity android:name=".ForeverCameCalling"
+            android:label="@string/category_forever_came_calling"/>
+        <activity android:name=".KnucklePuck"
+            android:label="@string/category_knuckle_puck"/>
+        <activity android:name=".DanceGavinDance"
+            android:label="@string/category_dance_gavin_dance"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

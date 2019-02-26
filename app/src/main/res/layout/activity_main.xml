@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -11,21 +16,26 @@
         android:id="@+id/knuckle_puck"
         style="@style/CategoryStyle"
         android:background="@color/color_primary_light"
-        android:text="@string/category_knuckle_puck" />
+        android:text="@string/category_knuckle_puck"
+        android:onClick="openKnucklePuck"/>
     <TextView
         android:id="@+id/dance_gavin_dance"
         style="@style/CategoryStyle"
         android:background="@color/color_secondary"
-        android:text="@string/category_dance_gavin_dance" />
+        android:text="@string/category_dance_gavin_dance"
+        android:onClick="openDanceGavinDance"/>
     <TextView
         android:id="@+id/forever_came_calling"
         style="@style/CategoryStyle"
         android:background="@color/color_primary_light"
-        android:text="@string/category_forever_came_calling" />
+        android:text="@string/category_forever_came_calling"
+        android:onClick="openForeverCameCalling"/>
     <TextView
         android:id="@+id/emarosa"
         style="@style/CategoryStyle"
         android:background="@color/color_secondary"
-        android:text="@string/category_emarosa" />
+        android:text="@string/category_emarosa"
+        android:onClick="openEmarosa"/>
 
 </LinearLayout>
+</ScrollView>
