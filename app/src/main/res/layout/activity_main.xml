@@ -7,6 +7,25 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+    <TextView
+        android:id="@+id/knuckle_puck"
+        style="@style/CategoryStyle"
+        android:background="@color/color_primary_light"
+        android:text="@string/category_knuckle_puck" />
+    <TextView
+        android:id="@+id/dance_gavin_dance"
+        style="@style/CategoryStyle"
+        android:background="@color/color_secondary"
+        android:text="@string/category_dance_gavin_dance" />
+    <TextView
+        android:id="@+id/forever_came_calling"
+        style="@style/CategoryStyle"
+        android:background="@color/color_primary_light"
+        android:text="@string/category_forever_came_calling" />
+    <TextView
+        android:id="@+id/emarosa"
+        style="@style/CategoryStyle"
+        android:background="@color/color_secondary"
+        android:text="@string/category_emarosa" />
 
 </LinearLayout>

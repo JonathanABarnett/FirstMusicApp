@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">MusicApp</string>
+    <string name="app_name">Music App</string>
+    <string name="category_knuckle_puck">Knuckle Puck</string>
+    <string name="category_dance_gavin_dance">Dance Gavin Dance</string>
+    <string name="category_forever_came_calling">Forever Came Calling</string>
+    <string name="category_emarosa">Emarosa</string>
 </resources>
