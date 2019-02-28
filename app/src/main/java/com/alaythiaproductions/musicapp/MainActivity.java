@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         TextView knucklePuckTextView = (TextView)findViewById(R.id.knuckle_puck);
         TextView danceGavinDanceTextView = (TextView)findViewById(R.id.dance_gavin_dance);
         TextView emarosaTextView = (TextView)findViewById(R.id.emarosa);

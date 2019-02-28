@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -34,6 +35,9 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         TextView album = (TextView)listItemVIew.findViewById(R.id.album);
         album.setText(currentSong.getAlbum());
+
+        ImageView albumImage = (ImageView)listItemVIew.findViewById(R.id.album_image);
+        albumImage.setImageResource(currentSong.getAlbumImage());
 
         return listItemVIew;
     }
