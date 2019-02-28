@@ -2,11 +2,7 @@ package com.alaythiaproductions.musicapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AndroidException;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,52 +12,31 @@ public class DanceGavinDance extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dance_gavin_dance);
+        setContentView(R.layout.song_list);
 
-        List<String> songs = new ArrayList<>();
+        List<Song> songs = new ArrayList<>();
 
-        songs.add("The Robot with Human Hair Pt. 1");
-        songs.add("The Robot with Human Hair Pt. 2");
-        songs.add("I am Royal Mountain");
-        songs.add("Dance All Night");
-        songs.add("Run All Night");
-        songs.add("The Robot with Human Hair Pt. 3");
-        songs.add("The Robot with Human Hair Pt. 4");
-        songs.add("Run All Night Again");
-        songs.add("Boogy");
-        songs.add("Machine Thoughts");
-        songs.add("You're Never Safe");
-        songs.add("Brink of Escape");
-        songs.add("Dance Dance");
-        songs.add("The Robot with Human Hair Pt. 1");
-        songs.add("The Robot with Human Hair Pt. 2");
-        songs.add("I am Royal Mountain");
-        songs.add("Dance All Night");
-        songs.add("Run All Night");
-        songs.add("The Robot with Human Hair Pt. 3");
-        songs.add("The Robot with Human Hair Pt. 4");
-        songs.add("Run All Night Again");
-        songs.add("Boogy");
-        songs.add("Machine Thoughts");
-        songs.add("You're Never Safe");
-        songs.add("Brink of Escape");
-        songs.add("Dance Dance");        songs.add("The Robot with Human Hair Pt. 1");
-        songs.add("The Robot with Human Hair Pt. 2");
-        songs.add("I am Royal Mountain");
-        songs.add("Dance All Night");
-        songs.add("Run All Night");
-        songs.add("The Robot with Human Hair Pt. 3");
-        songs.add("The Robot with Human Hair Pt. 4");
-        songs.add("Run All Night Again");
-        songs.add("Boogy");
-        songs.add("Machine Thoughts");
-        songs.add("You're Never Safe");
-        songs.add("Brink of Escape");
-        songs.add("Dance Dance");
+        songs.add(new Song("The Robot with Human Hair Pt. 1", "I Am Battle Ocean"));
+        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain"));
+        songs.add(new Song("I am Royal Mountain", "Orange"));
+        songs.add(new Song("Dance All Night", "Blue"));
+        songs.add(new Song("Run All Night", "I AM Battle Ocean"));
+        songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange"));
+        songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue"));
+        songs.add(new Song("Run All Night Again", "Downtown Mountain"));
+        songs.add(new Song("The Robot with Human Hair Pt. 1", "I Am Battle Ocean"));
+        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain"));
+        songs.add(new Song("I am Royal Mountain", "Orange"));
+        songs.add(new Song("Dance All Night", "Blue"));
+        songs.add(new Song("Run All Night", "I AM Battle Ocean"));
+        songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange"));
+        songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue"));
+        songs.add(new Song("Run All Night Again", "Downtown Mountain"));
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, songs);
+
+        SongAdapter songAdapter = new SongAdapter(this, songs);
         ListView listView = (ListView)findViewById(R.id.list);
-        listView.setAdapter(arrayAdapter);
+        listView.setAdapter(songAdapter);
 
     }
 }
