@@ -16,23 +16,19 @@ public class KnucklePuck extends AppCompatActivity {
 
         List<Song> songs = new ArrayList<>();
 
-        songs.add(new Song("Orange", "Blue"));
-        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain"));
-        songs.add(new Song("I am Royal Mountain", "Orange"));
-        songs.add(new Song("Dance All Night", "Blue"));
+        songs.add(new Song("Orange", "Blue", R.drawable.kp1));
+        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain", R.drawable.kp1));
+        songs.add(new Song("I am Royal Mountain", "Orange", R.drawable.kp1));
+        songs.add(new Song("Dance All Night", "Blue", R.drawable.kp1));
         songs.add(new Song("Run All Night", "I AM Battle Ocean"));
         songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange"));
         songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue"));
         songs.add(new Song("Run All Night Again", "Downtown Mountain"));
         songs.add(new Song("The Robot with Human Hair Pt. 1", "I Am Battle Ocean"));
         songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain"));
-        songs.add(new Song("I am Royal Mountain", "Orange"));
-        songs.add(new Song("Dance All Night", "Blue"));
-        songs.add(new Song("Run All Night", "I AM Battle Ocean"));
-        songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange"));
-        songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue"));
 
-        SongAdapter adapter = new SongAdapter(this, songs);
+
+        SongAdapter adapter = new SongAdapter(this, songs, R.color.color_secondary_light);
 
         ListView listView = (ListView)findViewById(R.id.list);
 

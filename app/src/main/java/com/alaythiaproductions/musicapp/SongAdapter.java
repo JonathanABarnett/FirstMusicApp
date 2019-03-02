@@ -2,6 +2,7 @@ package com.alaythiaproductions.musicapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +17,11 @@ import java.util.List;
 
 public class SongAdapter extends ArrayAdapter<Song> {
 
-    public SongAdapter(Activity context, List<Song> songs){
+    private int backgroundColorId;
+
+    public SongAdapter(Activity context, List<Song> songs, int backgroundColorId){
         super(context, 0, songs);
+        this.backgroundColorId = backgroundColorId;
     }
 
     @Override
@@ -37,7 +41,19 @@ public class SongAdapter extends ArrayAdapter<Song> {
         album.setText(currentSong.getAlbum());
 
         ImageView albumImage = (ImageView)listItemVIew.findViewById(R.id.album_image);
-        albumImage.setImageResource(currentSong.getAlbumImage());
+
+        if (currentSong.hasAlbum()) {
+
+            albumImage.setImageResource(currentSong.getAlbumImage());
+            albumImage.setVisibility(View.VISIBLE);
+
+        } else {
+            albumImage.setVisibility(View.GONE);
+        }
+
+        View textContainer = listItemVIew.findViewById(R.id.text_container);
+        int color = ContextCompat.getColor(getContext(), backgroundColorId);
+        textContainer.setBackgroundColor(color);
 
         return listItemVIew;
     }

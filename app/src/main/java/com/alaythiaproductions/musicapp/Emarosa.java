@@ -31,7 +31,7 @@ public class Emarosa extends AppCompatActivity {
         songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange"));
         songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue"));
 
-        SongAdapter adapter = new SongAdapter(this, songs);
+        SongAdapter adapter = new SongAdapter(this, songs, R.color.color_primary_light);
 
         ListView listView = (ListView)findViewById(R.id.list);
 

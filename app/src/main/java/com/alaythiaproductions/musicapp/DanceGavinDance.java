@@ -16,25 +16,25 @@ public class DanceGavinDance extends AppCompatActivity {
 
         List<Song> songs = new ArrayList<>();
 
-        songs.add(new Song("The Robot with Human Hair Pt. 1", "I Am Battle Ocean"));
-        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain"));
-        songs.add(new Song("I am Royal Mountain", "Orange"));
-        songs.add(new Song("Dance All Night", "Blue"));
-        songs.add(new Song("Run All Night", "I AM Battle Ocean"));
-        songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange"));
-        songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue"));
-        songs.add(new Song("Run All Night Again", "Downtown Mountain"));
-        songs.add(new Song("The Robot with Human Hair Pt. 1", "I Am Battle Ocean"));
-        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain"));
-        songs.add(new Song("I am Royal Mountain", "Orange"));
-        songs.add(new Song("Dance All Night", "Blue"));
-        songs.add(new Song("Run All Night", "I AM Battle Ocean"));
-        songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange"));
-        songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue"));
-        songs.add(new Song("Run All Night Again", "Downtown Mountain"));
+        songs.add(new Song("The Robot with Human Hair Pt. 1", "I Am Battle Ocean", R.drawable.dgd1));
+        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain", R.drawable.dgd1));
+        songs.add(new Song("I am Royal Mountain", "Orange", R.drawable.dgd2));
+        songs.add(new Song("Dance All Night", "Blue", R.drawable.dgd2));
+        songs.add(new Song("Run All Night", "I AM Battle Ocean", R.drawable.dgd2));
+        songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange", R.drawable.dgd2));
+        songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue", R.drawable.dgd1));
+        songs.add(new Song("Run All Night Again", "Downtown Mountain", R.drawable.dgd1));
+        songs.add(new Song("The Robot with Human Hair Pt. 1", "I Am Battle Ocean", R.drawable.dgd2));
+        songs.add(new Song("The Robot with Human Hair Pt. 2", "Downtown Mountain", R.drawable.dgd2));
+        songs.add(new Song("I am Royal Mountain", "Orange", R.drawable.dgd2));
+        songs.add(new Song("Dance All Night", "Blue", R.drawable.dgd1));
+        songs.add(new Song("Run All Night", "I AM Battle Ocean", R.drawable.dgd1));
+        songs.add(new Song("The Robot with Human Hair Pt. 3", "Orange", R.drawable.dgd1));
+        songs.add(new Song("The Robot with Human Hair Pt. 4", "Blue", R.drawable.dgd1));
+        songs.add(new Song("Run All Night Again", "Downtown Mountain", R.drawable.dgd1));
 
 
-        SongAdapter songAdapter = new SongAdapter(this, songs);
+        SongAdapter songAdapter = new SongAdapter(this, songs, R.color.color_primary_dark);
         ListView listView = (ListView)findViewById(R.id.list);
         listView.setAdapter(songAdapter);
 

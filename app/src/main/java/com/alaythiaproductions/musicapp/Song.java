@@ -2,9 +2,11 @@ package com.alaythiaproductions.musicapp;
 
 public class Song {
 
-    public String songTitle;
-    public String album;
-    public int albumImage = R.drawable.ic_launcher_background;
+    private String songTitle;
+    private String album;
+    private int albumImage;
+
+    private static final int NO_ALBUM_PROVIDED = -1;
 
     public Song(String songTitle, String album){
         this.songTitle = songTitle;
@@ -27,5 +29,9 @@ public class Song {
 
     public int getAlbumImage() {
         return albumImage;
+    }
+
+    public boolean hasAlbum() {
+        return albumImage != NO_ALBUM_PROVIDED;
     }
 }
